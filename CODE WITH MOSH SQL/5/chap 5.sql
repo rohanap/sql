@@ -1,0 +1,8 @@
+
+
+-- 6 SELECT CLAUSE
+SELECT first_value
+FROM CUSTOMERS;
+
+
+
