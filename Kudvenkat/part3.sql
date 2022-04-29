@@ -1,0 +1,25 @@
+-- Creating and Working with tables - Part 3
+
+CREATE DATABASE Sample;
+
+USE Sample
+GO;
+
+CREATE TABLE tblGender(
+ ID INT NOT NULL PRIMARY KEY,
+ GENDER NVARCHAR(5)
+);
+
+CREATE TABLE tblPerson(
+ ID INT NOT NULL,
+ NAME VARCHAR(5),
+ EMAIL VARCHAR(10),
+ GENDERID INT
+);
+
+ALTER TABLE tblPerson
+ADD CONSTRAINT tblPerson_GenderId_FK 
+FOREIGN KEY (GENDERID) REFERENCES tblGender(ID);
+
+
+
