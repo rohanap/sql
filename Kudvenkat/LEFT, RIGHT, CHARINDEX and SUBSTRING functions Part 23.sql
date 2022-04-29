@@ -1,0 +1,9 @@
+-- LEFT, RIGHT, CHARINDEX and SUBSTRING functions - Part 23
+
+SELECT * FROM tblPerson;
+
+SELECT SUBSTRING(Email, CHARINDEX('@',Email)+1,
+LEN(Email)-CHARINDEX('@',Email)) AS MAIL,
+COUNT(Email) AS TOTAL
+FROM tblPerson
+GROUP BY SUBSTRING(Email, CHARINDEX('@',Email)+1,LEN(Email)-CHARINDEX('@',Email))
